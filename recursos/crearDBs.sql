@@ -57,6 +57,7 @@ CREATE TABLE [dbo].[ARTICULOS](
 	[Precio] [money] NULL,
 	[IdSucursal] [int] NULL,
 	[Observaciones] [varchar](400) NULL,
+	[Fecha] [date],
  CONSTRAINT [PK_ARTICULOS] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
