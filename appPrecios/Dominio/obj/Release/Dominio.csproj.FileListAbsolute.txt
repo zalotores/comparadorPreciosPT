@@ -1,0 +1,6 @@
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Dominio\bin\Release\Dominio.dll
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Dominio\bin\Release\Dominio.pdb
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Dominio\obj\Release\Dominio.csproj.AssemblyReference.cache
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Dominio\obj\Release\Dominio.csproj.CoreCompileInputs.cache
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Dominio\obj\Release\Dominio.dll
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Dominio\obj\Release\Dominio.pdb

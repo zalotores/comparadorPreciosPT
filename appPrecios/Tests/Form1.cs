@@ -60,8 +60,8 @@ namespace Tests
         {
             try
             {
-                SucursalNegocio marcaNegocio = new SucursalNegocio();
-                dgvTestTablasAux.DataSource = marcaNegocio.listar();
+                SucursalNegocio sucursalNegocio = new SucursalNegocio();
+                dgvTestTablasAux.DataSource = sucursalNegocio.listar();
             }
             catch (Exception ex)
             {
@@ -71,9 +71,9 @@ namespace Tests
 
         private void btnTestMarcaGenerado_Click(object sender, EventArgs e)
         {
-            Sucursal marca = new Sucursal();
-            MessageBox.Show("Marca | " + "id: " + marca.Id.ToString() + 
-                " | descripcion: " + marca.Descripcion);
+            Sucursal sucursal = new Sucursal();
+            MessageBox.Show("Marca | " + "id: " + sucursal.Id.ToString() + 
+                " | descripcion: " + sucursal.Descripcion);
         }
 
         private void btnTestCategoriaGenerado_Click(object sender, EventArgs e)
@@ -86,15 +86,18 @@ namespace Tests
         private void btnTestArticuloGenerado_Click(object sender, EventArgs e)
         {
             Articulo articulo = new Articulo();
-            MessageBox.Show("Articulo | " + "id: " + articulo.Id.ToString() +
-                " | codigoArticulo: " + articulo.CodigoArticulo +
-                " | nombre: " + articulo.Nombre + "descripcion: " + articulo.Descripcion +
-                " | urlImagen: " + articulo.Imagen + " | precio: " + articulo.Precio.ToString());
-            if (articulo.Marca is null)
-                MessageBox.Show("Marca generada en articulo es Null");
+            MessageBox.Show("Nombre: " + articulo.Nombre +
+                " | observaciones: " + articulo.Observaciones +
+                " | precio: " + articulo.Precio.ToString());
+            if (articulo.Fecha is null)
+                MessageBox.Show("Fecha generada en articulo es Null");
             else
-                MessageBox.Show("Marca generada | id: " + articulo.Marca.Id.ToString() +
-                " | descripcion: " + articulo.Marca.Descripcion);
+                MessageBox.Show(" | fecha: " + articulo.Fecha.ToString());
+            if (articulo.Sucursal is null)
+                MessageBox.Show("Sucursal generada en articulo es Null");
+            else
+                MessageBox.Show("Sucursal generada | id: " + articulo.Sucursal.Id.ToString() +
+                " | descripcion: " + articulo.Sucursal.Descripcion);
             if (articulo.Categoria is null)
                 MessageBox.Show("Categoria generada en articulo es Null");
             else

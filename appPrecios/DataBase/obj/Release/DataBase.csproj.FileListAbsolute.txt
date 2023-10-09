@@ -4,3 +4,9 @@ C:\datos\zalo\cursos\MaxiPrograma\finalN2\TPFinalNivel2_Torres\DataBase\obj\Rele
 C:\datos\zalo\cursos\MaxiPrograma\finalN2\TPFinalNivel2_Torres\DataBase\obj\Release\DataBase.csproj.CoreCompileInputs.cache
 C:\datos\zalo\cursos\MaxiPrograma\finalN2\TPFinalNivel2_Torres\DataBase\obj\Release\DataBase.dll
 C:\datos\zalo\cursos\MaxiPrograma\finalN2\TPFinalNivel2_Torres\DataBase\obj\Release\DataBase.pdb
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\DataBase\bin\Release\DataBase.dll
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\DataBase\bin\Release\DataBase.pdb
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\DataBase\obj\Release\DataBase.csproj.AssemblyReference.cache
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\DataBase\obj\Release\DataBase.csproj.CoreCompileInputs.cache
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\DataBase\obj\Release\DataBase.dll
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\DataBase\obj\Release\DataBase.pdb

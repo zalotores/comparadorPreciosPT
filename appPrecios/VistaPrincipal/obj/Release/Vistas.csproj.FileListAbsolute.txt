@@ -1,0 +1,8 @@
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Release\Vistas.csproj.AssemblyReference.cache
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Release\VistaPrincipal.frmAddUpdate.resources
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Release\VistaPrincipal.frmDetalle.resources
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Release\VistaPrincipal.frmAbout.resources
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Release\VistaPrincipal.frmPrincipal.resources
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Release\VistaPrincipal.Properties.Resources.resources
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Release\Vistas.csproj.GenerateResource.cache
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Release\Vistas.csproj.CoreCompileInputs.cache

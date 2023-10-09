@@ -1,0 +1,11 @@
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Negocio\bin\Release\Negocio.dll
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Negocio\bin\Release\Negocio.pdb
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Negocio\bin\Release\DataBase.dll
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Negocio\bin\Release\Dominio.dll
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Negocio\bin\Release\DataBase.pdb
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Negocio\bin\Release\Dominio.pdb
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Negocio\obj\Release\Negocio.csproj.AssemblyReference.cache
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Negocio\obj\Release\Negocio.csproj.CoreCompileInputs.cache
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Negocio\obj\Release\Negocio.csproj.CopyComplete
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Negocio\obj\Release\Negocio.dll
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Negocio\obj\Release\Negocio.pdb
