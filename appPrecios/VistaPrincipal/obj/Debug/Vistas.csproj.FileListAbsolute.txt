@@ -28,3 +28,4 @@ C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincip
 C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
 C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Debug\VistaPrincipal.exe
 C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Debug\VistaPrincipal.pdb
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\VistaPrincipal\obj\Debug\VistaPrincipal.Main.resources

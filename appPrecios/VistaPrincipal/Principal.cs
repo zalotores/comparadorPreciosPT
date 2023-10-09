@@ -29,39 +29,8 @@ namespace VistaPrincipal
             iniciarFiltros();
         }
 
-        //carga de tabla
-        private void cargar()
-        {
-            
-            ArticuloNegocio negocio = new ArticuloNegocio();
 
-            try
-            {
-                if(!filtrado)   //solamente entra cuando no esta aplicado filtro
-                {
-                    listaArticulos = negocio.listar();
-                }
-                dgvArticulos.DataSource = listaArticulos;
-                fomatearColumnas();
-            }
-            catch 
-            {
-                MessageBox.Show("Error al conectar a la Base de Datos");
-            }
-        }
 
-        //formato de data grid
-        private void fomatearColumnas()
-        {
-            //oculta columnas que trae de DDBB pero no quiero visualizar
-            dgvArticulos.Columns["Id"].Visible = false;
-            dgvArticulos.Columns["Imagen"].Visible = false;
-            dgvArticulos.Columns["Descripcion"].Visible = false;
-
-            //cambio el formato de precio para que muestre dos decimales
-            dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "0.00";
-
-        }
         //entrada a ventana detalle
         private void dgvArticulos_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -223,13 +192,13 @@ namespace VistaPrincipal
         private void iniciarFiltros()
         {            
             //filtro para seccion marca / categoria
-            List<Sucursal> listaMarcas = new List<Sucursal>();
-            SucursalNegocio marcaNeg = new SucursalNegocio();
-            listaMarcas = marcaNeg.listar();
-            Sucursal ceroM = new Sucursal();  //cargo el primer item vacio con id = 0
-            ceroM.Descripcion = "";
-            cboFiltroMarca.Items.Add(ceroM);
-            foreach (Sucursal i in listaMarcas)
+            List<Sucursal> listaSucursal = new List<Sucursal>();
+            SucursalNegocio sucursalNeg = new SucursalNegocio();
+            listaSucursal = sucursalNeg.listar();
+            Sucursal ceroS = new Sucursal();  //cargo el primer item vacio con id = 0
+            ceroS.Descripcion = "";
+            cboFiltroMarca.Items.Add(ceroS);
+            foreach (Sucursal i in listaSucursal)
             {
                 cboFiltroMarca.Items.Add(i);
             }
