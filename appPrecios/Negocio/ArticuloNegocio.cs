@@ -53,25 +53,23 @@ namespace Negocio
             }
         }
 
-        //TODO cambiar la query
         public void agregar(Articulo articulo)
         {
             try
             {
                 //query para agregar datos con proteccion de injeccion de codigo
-                query = "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria" +
-                    ", ImagenUrl, Precio ) VALUES (@codigo, @nombre, @descripcion, @idMarca, " +
-                    "@idCategoria, @imagen, @precio);";
+                query = "INSERT INTO ARTICULOS(Nombre, IdCategoria, Precio, IdSucursal, " +
+                    "Observaciones, Fecha ) VALUES (@nombre, @idCategoria, @precio, @idSucursal" +
+                    ", @observaciones, @fecha)";
                 //setear consulta
                 con.setConsulta(query);
                 //setear parametros
-                con.setParametro("@codigo", articulo.CodigoArticulo);
                 con.setParametro("@nombre", articulo.Nombre);
-                con.setParametro("@descripcion", articulo.Descripcion);
-                con.setParametro("@idMarca", articulo.Marca.Id);
                 con.setParametro("@idCategoria", articulo.Categoria.Id);
-                con.setParametro("@imagen", articulo.Imagen);
                 con.setParametro("@precio", articulo.Precio);
+                con.setParametro("@idSucursal", articulo.Sucursal.Id);
+                con.setParametro("@observaciones", articulo.Observaciones);
+                con.setParametro("@fecha", articulo.Fecha);
                 //ejecutar consulta
                 con.ejecutarQuery();
             }
@@ -88,21 +86,20 @@ namespace Negocio
         public void modificar(Articulo articulo)
         {
             //query para hacer update en DDBB
-            query = "UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, " +
-                "Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria" +
-                ", ImagenUrl = @imagen, Precio = @precio WHERE Id = @id; ";
+            query = "UPDATE ARTICULOS SET Nombre = @nombre, IdCategoria = @idCategoria, " +
+                "Precio = @precio, IdSucursal = @idSucursal, Observaciones = @observaciones" +
+                ", Fecha = @fecha WHERE Id = @id";
             try
             {
                 //setear consulta
                 con.setConsulta(query);
                 //setear parametros
-                con.setParametro("@codigo", articulo.CodigoArticulo);
                 con.setParametro("@nombre", articulo.Nombre);
-                con.setParametro("@descripcion", articulo.Descripcion);
-                con.setParametro("@idMarca", articulo.Marca.Id);
                 con.setParametro("@idCategoria", articulo.Categoria.Id);
-                con.setParametro("@imagen", articulo.Imagen);
                 con.setParametro("@precio", articulo.Precio);
+                con.setParametro("@idSucursal", articulo.Sucursal.Id);
+                con.setParametro("@observaciones", articulo.Observaciones);
+                con.setParametro("@fecha", articulo.Fecha);
                 con.setParametro("@id", articulo.Id);
                 //ejecutar consulta
                 con.ejecutarQuery();
@@ -142,6 +139,8 @@ namespace Negocio
             }
 
         }
+        //TODO revisar filtros!
+
         /*query para filtrar articulos
          * Parametros:
          * Marca y Categoria: se genera desde constructor y se copia valor, en caso de no 
@@ -150,23 +149,23 @@ namespace Negocio
          * principio y al final del string, y filtra si el campo contiene el string
          * precioMin y precioMax: si los dos estan en cero, no filtra. No debe tener '.'.
          */
-        public List<Articulo> filtrar(Sucursal marca, Categoria categoria, string codigo, 
-            string nombre, string descripcion, decimal precioMin, decimal precioMax)
+        public List<Articulo> filtrar(Sucursal sucursal, Categoria categoria, string observaciones, 
+            string nombre, string fecha, decimal precioMin, decimal precioMax)
         {
             List<Articulo> listaFiltrada = new List<Articulo> ();
             //string para agregar a la query de listar()
             string filtro = "";
 
-            if (marca.Id != 0)
-                filtro = filtro + " AND M.Id = " + marca.Id;
+            if (sucursal.Id != 0)
+                filtro = filtro + " AND M.Id = " + sucursal.Id;
             if(categoria.Id != 0)
                 filtro = filtro + " AND C.Id = " + categoria.Id;
-            if (codigo.Length > 0)
-                filtro = filtro + " AND Codigo LIKE '%"+ codigo + "%'";
+            if (observaciones.Length > 0)
+                filtro = filtro + " AND Codigo LIKE '%"+ observaciones + "%'";
             if (nombre.Length > 0)
                 filtro = filtro + " AND Nombre LIKE '%" + nombre + "%'";
-            if (descripcion.Length > 0)
-                filtro = filtro + " AND A.Descripcion LIKE '%" + descripcion + "%'";
+            if (fecha.Length > 0)
+                filtro = filtro + " AND A.Descripcion LIKE '%" + fecha + "%'";
             if (precioMin > 0)
                 filtro = filtro + " AND Precio > " + precioMin;
             if (precioMax < decimal.MaxValue)
