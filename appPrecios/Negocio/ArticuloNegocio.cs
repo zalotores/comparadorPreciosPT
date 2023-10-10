@@ -15,13 +15,18 @@ namespace Negocio
         AccesoDatos con = new AccesoDatos();
         //variable para ejecutar las query, inicializo con la que se usa para listar()
 
-        string query = "SELECT A.Id, Nombre, C.Descripcion AS Categoría, Precio, S.Descripcion" +
-            "AS Sucursal, Observaciones, Fecha FROM ARTICULOS A, CATEGORIAS C, SUCURSALES S " +
-            "WHERE A.IdSucursal = S.Id AND A.IdCategoria = C.Id";
+        string query = "SELECT A.Id, Nombre, C.Id AS CatId, C.Descripcion AS Categoría, Precio," +
+            "S.Id AS SucId, S.Descripcion AS Sucursal, Observaciones, Fecha FROM ARTICULOS A," +
+            "CATEGORIAS C, SUCURSALES S WHERE A.IdSucursal = S.Id AND A.IdCategoria = C.Id";
 
-        public List<Articulo> listar()
+        public List<Articulo> listar(decimal precioMinimo, decimal precioMaximo)
         {
             List<Articulo> lista = new List<Articulo>();
+
+            if (precioMinimo > 0)
+                query = query + " AND Precio >= " + precioMinimo;
+            if (( precioMaximo != 0 ) && ( precioMaximo > precioMinimo ))
+                query = query + " AND Precio >= " + precioMaximo;
 
             try
             {
@@ -33,11 +38,11 @@ namespace Negocio
                     Articulo articulo = new Articulo();
                     articulo.Id = (int) con.Reader["Id"];
                     articulo.Nombre = con.Reader.GetString(1);
-                    articulo.Sucursal = new Sucursal((int)con.Reader["IdSucursal"], con.Reader.GetString(4));
-                    articulo.Categoria = new Categoria((int)con.Reader["IdCategoria"], con.Reader.GetString(2));
-                    articulo.Observaciones = con.Reader.GetString(5);
+                    articulo.Sucursal = new Sucursal((int)con.Reader["SucId"], con.Reader.GetString(6));
+                    articulo.Categoria = new Categoria((int)con.Reader["CatId"], con.Reader.GetString(3));
+                    articulo.Observaciones = con.Reader.GetString(7);
                     articulo.Precio = (decimal)con.Reader["Precio"];
-                    articulo.Fecha = con.Reader.GetString(6);
+                    articulo.Fecha = (DateTime) con.Reader["Fecha"];
 
                     lista.Add(articulo);
                 }
@@ -148,7 +153,7 @@ namespace Negocio
          * Codigo, Nombre, Descripcion: el filtro hace un strip de espacios en blanco al 
          * principio y al final del string, y filtra si el campo contiene el string
          * precioMin y precioMax: si los dos estan en cero, no filtra. No debe tener '.'.
-         */
+         
         public List<Articulo> filtrar(Sucursal sucursal, Categoria categoria, string observaciones, 
             string nombre, string fecha, decimal precioMin, decimal precioMax)
         {
@@ -176,6 +181,7 @@ namespace Negocio
             listaFiltrada = listar();
             return listaFiltrada;
         }
+        */
 
     }
 }

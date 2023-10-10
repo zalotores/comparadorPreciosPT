@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VistaPrincipal
+
 {
     internal static class Program
     {
@@ -16,7 +17,7 @@ namespace VistaPrincipal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new frmMain());
         }
     }
 }

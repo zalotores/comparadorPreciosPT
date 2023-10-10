@@ -5,7 +5,7 @@ SELECT * FROM CATEGORIAS
 
 --comando select--
 
-SELECT A.Id, Nombre, C.Descripcion AS Categoría, Precio, S.Descripcion AS Sucursal, Observaciones, Fecha FROM ARTICULOS A, CATEGORIAS C, SUCURSALES S WHERE A.IdSucursal = S.Id AND A.IdCategoria = C.Id
+SELECT A.Id, Nombre, C.Id AS CatId, C.Descripcion AS Categoría, Precio, S.Id AS SucId, S.Descripcion AS Sucursal, Observaciones, Fecha FROM ARTICULOS A, CATEGORIAS C, SUCURSALES S WHERE A.IdSucursal = S.Id AND A.IdCategoria = C.Id AND C.Descripcion = 'Otro' AND Precio >= 2.2
 
 --comando create--
 

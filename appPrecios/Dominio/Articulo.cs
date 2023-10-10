@@ -16,6 +16,6 @@ namespace Dominio
         public Categoria Categoria {  get; set; }
         public decimal Precio {  get; set; }
         public string Observaciones { get; set; }
-        public string Fecha { get; set; }
+        public DateTime Fecha { get; set; }
     }
 }
