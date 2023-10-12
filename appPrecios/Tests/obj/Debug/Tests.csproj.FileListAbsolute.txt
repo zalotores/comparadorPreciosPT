@@ -15,3 +15,8 @@ C:\datos\zalo\cursos\MaxiPrograma\finalN2\TPFinalNivel2_Torres\Tests\bin\Debug\D
 C:\datos\zalo\cursos\MaxiPrograma\finalN2\TPFinalNivel2_Torres\Tests\bin\Debug\Negocio.dll
 C:\datos\zalo\cursos\MaxiPrograma\finalN2\TPFinalNivel2_Torres\Tests\bin\Debug\Dominio.pdb
 C:\datos\zalo\cursos\MaxiPrograma\finalN2\TPFinalNivel2_Torres\Tests\bin\Debug\Negocio.pdb
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Tests\obj\Debug\Tests.csproj.AssemblyReference.cache
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Tests\obj\Debug\Tests.formTest.resources
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Tests\obj\Debug\Tests.Properties.Resources.resources
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Tests\obj\Debug\Tests.csproj.GenerateResource.cache
+C:\datos\zalo\cursos\aplicacionesInventadas\appPreciosPT\appPrecios\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache

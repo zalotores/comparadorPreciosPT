@@ -116,5 +116,11 @@ namespace Tests
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void buttonDateTime_Click(object sender, EventArgs e)
+        {
+            DateTime fecha = monthCalendar1.SelectionRange.Start;
+            MessageBox.Show(fecha.ToString());
+        }
     }
 }

@@ -59,7 +59,7 @@ namespace VistaPrincipal
             dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["Precio"].Visible = false;
             dgvArticulos.Columns["Observaciones"].Visible = false;
-            dgvArticulos.Columns["Fecha"].Visible = false;
+            //dgvArticulos.Columns["Fecha"].Visible = false;
             dgvArticulos.Columns["Categoria"].Visible = false;
 
             //cambio el formato de precio para que muestre dos decimales
@@ -100,6 +100,13 @@ namespace VistaPrincipal
                 MessageBox.Show("Error al conectar a la base de datos!");
             }
 
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAdd frmAdd = new frmAdd();
+            frmAdd.ShowDialog();
+            cargar();
         }
     }
 }

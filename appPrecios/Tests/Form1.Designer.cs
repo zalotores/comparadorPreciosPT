@@ -43,13 +43,17 @@
             this.btnTestCategoriaGenerado = new System.Windows.Forms.Button();
             this.btnTestMarcaGenerado = new System.Windows.Forms.Button();
             this.groupBoxLinks = new System.Windows.Forms.GroupBox();
-            this.lblLinkTest = new System.Windows.Forms.Label();
             this.linkLabelTest = new System.Windows.Forms.LinkLabel();
+            this.lblLinkTest = new System.Windows.Forms.Label();
+            this.groupBoxFecha = new System.Windows.Forms.GroupBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.buttonDateTime = new System.Windows.Forms.Button();
             this.groupBoxTestDDBB.SuspendLayout();
             this.groupBoxTestTablasAuxiliares.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTestTablasAux)).BeginInit();
             this.groupBoxMarcaCat.SuspendLayout();
             this.groupBoxLinks.SuspendLayout();
+            this.groupBoxFecha.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnTestDDBB
@@ -155,16 +159,16 @@
             this.groupBoxMarcaCat.Controls.Add(this.btnTestArticuloGenerado);
             this.groupBoxMarcaCat.Controls.Add(this.btnTestCategoriaGenerado);
             this.groupBoxMarcaCat.Controls.Add(this.btnTestMarcaGenerado);
-            this.groupBoxMarcaCat.Location = new System.Drawing.Point(546, 13);
+            this.groupBoxMarcaCat.Location = new System.Drawing.Point(523, 13);
             this.groupBoxMarcaCat.Name = "groupBoxMarcaCat";
-            this.groupBoxMarcaCat.Size = new System.Drawing.Size(242, 109);
+            this.groupBoxMarcaCat.Size = new System.Drawing.Size(265, 71);
             this.groupBoxMarcaCat.TabIndex = 7;
             this.groupBoxMarcaCat.TabStop = false;
             this.groupBoxMarcaCat.Text = "Generar Modelo";
             // 
             // btnTestArticuloGenerado
             // 
-            this.btnTestArticuloGenerado.Location = new System.Drawing.Point(84, 80);
+            this.btnTestArticuloGenerado.Location = new System.Drawing.Point(168, 30);
             this.btnTestArticuloGenerado.Name = "btnTestArticuloGenerado";
             this.btnTestArticuloGenerado.Size = new System.Drawing.Size(75, 23);
             this.btnTestArticuloGenerado.TabIndex = 2;
@@ -174,7 +178,7 @@
             // 
             // btnTestCategoriaGenerado
             // 
-            this.btnTestCategoriaGenerado.Location = new System.Drawing.Point(145, 30);
+            this.btnTestCategoriaGenerado.Location = new System.Drawing.Point(87, 30);
             this.btnTestCategoriaGenerado.Name = "btnTestCategoriaGenerado";
             this.btnTestCategoriaGenerado.Size = new System.Drawing.Size(75, 23);
             this.btnTestCategoriaGenerado.TabIndex = 1;
@@ -184,7 +188,7 @@
             // 
             // btnTestMarcaGenerado
             // 
-            this.btnTestMarcaGenerado.Location = new System.Drawing.Point(33, 30);
+            this.btnTestMarcaGenerado.Location = new System.Drawing.Point(6, 30);
             this.btnTestMarcaGenerado.Name = "btnTestMarcaGenerado";
             this.btnTestMarcaGenerado.Size = new System.Drawing.Size(75, 23);
             this.btnTestMarcaGenerado.TabIndex = 0;
@@ -203,15 +207,6 @@
             this.groupBoxLinks.TabStop = false;
             this.groupBoxLinks.Text = "Links externos";
             // 
-            // lblLinkTest
-            // 
-            this.lblLinkTest.AutoSize = true;
-            this.lblLinkTest.Location = new System.Drawing.Point(18, 33);
-            this.lblLinkTest.Name = "lblLinkTest";
-            this.lblLinkTest.Size = new System.Drawing.Size(30, 13);
-            this.lblLinkTest.TabIndex = 0;
-            this.lblLinkTest.Text = "Link:";
-            // 
             // linkLabelTest
             // 
             this.linkLabelTest.AutoSize = true;
@@ -223,11 +218,49 @@
             this.linkLabelTest.Text = "Hazme Click!";
             this.linkLabelTest.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelTest_LinkClicked);
             // 
+            // lblLinkTest
+            // 
+            this.lblLinkTest.AutoSize = true;
+            this.lblLinkTest.Location = new System.Drawing.Point(18, 33);
+            this.lblLinkTest.Name = "lblLinkTest";
+            this.lblLinkTest.Size = new System.Drawing.Size(30, 13);
+            this.lblLinkTest.TabIndex = 0;
+            this.lblLinkTest.Text = "Link:";
+            // 
+            // groupBoxFecha
+            // 
+            this.groupBoxFecha.Controls.Add(this.buttonDateTime);
+            this.groupBoxFecha.Controls.Add(this.monthCalendar1);
+            this.groupBoxFecha.Location = new System.Drawing.Point(523, 90);
+            this.groupBoxFecha.Name = "groupBoxFecha";
+            this.groupBoxFecha.Size = new System.Drawing.Size(265, 239);
+            this.groupBoxFecha.TabIndex = 9;
+            this.groupBoxFecha.TabStop = false;
+            this.groupBoxFecha.Text = "DateTime";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(11, 25);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 0;
+            // 
+            // buttonDateTime
+            // 
+            this.buttonDateTime.Location = new System.Drawing.Point(87, 199);
+            this.buttonDateTime.Name = "buttonDateTime";
+            this.buttonDateTime.Size = new System.Drawing.Size(75, 23);
+            this.buttonDateTime.TabIndex = 1;
+            this.buttonDateTime.Text = "Capturar";
+            this.buttonDateTime.UseVisualStyleBackColor = true;
+            this.buttonDateTime.Click += new System.EventHandler(this.buttonDateTime_Click);
+            // 
             // formTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBoxFecha);
             this.Controls.Add(this.groupBoxLinks);
             this.Controls.Add(this.groupBoxMarcaCat);
             this.Controls.Add(this.groupBoxTestTablasAuxiliares);
@@ -242,6 +275,7 @@
             this.groupBoxMarcaCat.ResumeLayout(false);
             this.groupBoxLinks.ResumeLayout(false);
             this.groupBoxLinks.PerformLayout();
+            this.groupBoxFecha.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -265,6 +299,9 @@
         private System.Windows.Forms.GroupBox groupBoxLinks;
         private System.Windows.Forms.LinkLabel linkLabelTest;
         private System.Windows.Forms.Label lblLinkTest;
+        private System.Windows.Forms.GroupBox groupBoxFecha;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button buttonDateTime;
     }
 }
 
